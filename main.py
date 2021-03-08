@@ -51,3 +51,4 @@ if __name__ == '__main__':
     my_pusher = RTMP(rtmp_url=rtmpUrl)
     my_pusher.push_frame()
 
+
