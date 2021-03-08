@@ -50,3 +50,4 @@ if __name__ == '__main__':
     rtmpUrl = "rtmp://116.62.153.244:1935/stream/wx"
     my_pusher = RTMP(rtmp_url=rtmpUrl)
     my_pusher.push_frame()
+aa
