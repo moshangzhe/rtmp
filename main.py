@@ -1,8 +1,6 @@
 import cv2 as cv
 import time
 import subprocess as sp
-import multiprocessing
-import platform
 import psutil
 import time
 
@@ -27,6 +25,7 @@ class RTMP:
                         '-c:v', 'libx264',
                         '-pix_fmt', 'yuv420p',
                         '-preset', 'ultrafast',
+                        '-tune', 'zerolatency',
                         '-f', 'flv',
                         self.rtmp_url]
 
@@ -47,6 +46,6 @@ class RTMP:
 
 
 if __name__ == '__main__':
-    rtmpUrl = "rtmp://116.62.153.244:1935/stream/wx"
+    rtmpUrl = "rtmp://116.62.153.244:1935/stream/wx2"
     my_pusher = RTMP(rtmp_url=rtmpUrl)
     my_pusher.push_frame()
