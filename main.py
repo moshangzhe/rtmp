@@ -31,7 +31,7 @@ class RTMP:
 
     # 向服务器推送
     def push_frame(self):
-        cap = cv.VideoCapture(-1)
+        cap = cv.VideoCapture(0)
         _, frame = cap.read()
         # 指定在哪些cpu核上运行。我的ARM有6核，前4核较慢做辅助处理。后2核较快，做核心程序的处理。这里指定推流动作在慢的4个核中运行
         p = psutil.Process()
