@@ -12,14 +12,14 @@
 在浏览器中输入:(ip):8080/stat可以查看后台
 ![1](https://github.com/moshangzhe/rtmp/blob/master/picture/1.jpg)
 
-##编写视频推流代码
-###1.使用ffmpeg实现rtmp推流
+## 编写视频推流代码
+### 1.使用ffmpeg实现rtmp推流
 
 测试ffmpeg:
 
 `ffmpeg -f video4linux2 -s  640x480 -i /dev/video10  -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f flv rtmp://`
 
-###2.在python中实现ffmpeg
+### 2.在python中实现ffmpeg
 
 (1)使用python-opencv采集摄像头数据
 
